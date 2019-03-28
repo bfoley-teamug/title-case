@@ -30,7 +30,7 @@ button {
 input {
   border: 1px solid #dcdcdc;
   margin-right: 1em;
-  width: 400px
+  width: 600px
 }
 
 button {
@@ -38,13 +38,9 @@ button {
   background: #ADD8E6;
   border: solid 1px;
   border-color: rgba(0, 0, 0, .1);
+  margin-top: 8px;
   cursor: pointer;
-}
-
-p {
-  text-align: center;
-  font-size: 24px;
-}
+} 
 
 #display {
   margin-left: 15%;
@@ -58,7 +54,8 @@ p {
 } 
 
 .center {
- margin-left: 15%;
+ margin: auto;
+ width: 50%;
  margin-bottom: 4em;
 }
 
