@@ -2,6 +2,9 @@ let one = document.getElementById("one");
 let two = document.getElementById("two"); 
 let three = document.getElementById("three"); 
 
+let colours = ["#000000", "#FF0000", "#990066", "#FF9966", "#996666", "#00FF00", "#CC9933", "#000080", "#008000", "#2F4F4F", "#FF69B4", "#e9967a", "#ff8c00"], 
+    idx;
+
 one.addEventListener('click', (e) => {
  
   e.preventDefault();  
@@ -39,8 +42,9 @@ two.addEventListener('click', (e) => {
 })
 
 three.addEventListener('click', (e) => {
-  console.log("hello world");
+  
   e.preventDefault();  
+  console.log("hello world");
  
   const letters = document.getElementById("letters"); 
   const input = letters.querySelector(".form-control");
@@ -53,6 +57,18 @@ three.addEventListener('click', (e) => {
     }).join('');
   }
   
+  
   const p = document.getElementById('display');
   p.textContent = titleCase(text); 
+ 
+  
+  var div = $('#display'); 
+    var chars = div.text().split('');
+    div.html('');     
+    for(var i=0; i<chars.length; i++) {
+        idx = Math.floor(Math.random() * colours.length);
+        var span = $('<span>' + chars[i] + '</span>').css("color", colours[idx]);
+        div.append(span);
+    }
+  
 })
