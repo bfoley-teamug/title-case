@@ -1,5 +1,6 @@
 let one = document.getElementById("one"); 
 let two = document.getElementById("two"); 
+let twoPointFive = document.getElementById("two-point-five");
 let three = document.getElementById("three"); 
 
 let colours = ["#000000", "#FF0000", "#990066", "#FF9966", "#996666", "#00FF00", "#CC9933", "#000080", "#008000", "#2F4F4F", "#FF69B4", "#e9967a", "#ff8c00"], 
@@ -39,6 +40,24 @@ two.addEventListener('click', (e) => {
   
   const p = document.getElementById('display');
   p.textContent = titleCase(text); 
+})
+
+twoPointFive.addEventListener('click', (e) => {
+ 
+  e.preventDefault();  
+  console.log("David Bowie");  
+  const letters = document.getElementById("letters"); 
+  const input = letters.querySelector(".form-control");
+  const text = input.value; 
+  
+  function camelCase(text) {
+    return text.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index == 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+  }
+  
+  const p = document.getElementById('display');
+  p.textContent = camelCase(text); 
 })
 
 three.addEventListener('click', (e) => {
